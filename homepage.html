@@ -13,7 +13,7 @@
 
 <body>
   <header class="header">
-    <img src="img/logoeiga.svg" alt="Logo" class="logo">
+    <a href="homepage.html"><img src="img/logoeiga.svg" alt="Logo" class="logo"></a>
   </header>
 
   <div class="sectionContainer">
@@ -47,11 +47,13 @@
       </div>
 
       <div class="usernameContainer">
-        <div class="userImage"></div>
+        <div class="userImage">
+          <img src="img/avataaars.png" class="avatar" alt="">
+        </div>
         <div class="usernameTXT">
 
 
-          <p class="usernameFont">Username</p>
+          <p class="usernameFont">Bonjour Mike</p>
         </div>
       </div>
     </div>
@@ -67,50 +69,76 @@
     </div>
 
     <div class="playerContainer">
-      <video class="playerBox"></video>
+
+      <div class="Container">
+        <div class="btnContainer">
+          <video class="playerBox" data="title"></video>
+          <div class="megaContainer">
+            <div class="test">
+              <div class="tempsContainer">
+                <span id="tempsEnCours">0:00</span>
+                <input id="progressBar" type="range" value="0" max="100">
+                <span id="tempsTotal">0:00</span>
+              </div>
+              <div class="allButtoncontainer">
+                <div class="controlButtonContainer">
+                  <button class="play_pause"></button>
+                  <button id="stop"></button>
+                </div>
+                <div class="VolumeAndFullScreenContainer">
+                  <button id="mutebtn"></button>
+                  <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+                  <button id="fullscreenbtn"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       <div class="textPlayer">
-        <h1 class="descTitle">Title of the Video</h1>
-
-        <div class="playerInfo">
-          <div class="InfoContainer">
-            <h3 class="marginReset blackInfo">Created by</h3>
-            <p class="fontPlayer author authorInfo descAuth">Author Name</p>
-          </div>
-          <div class="InfoContainer">
-
-            <h3 class="marginReset blackInfo">Year</h3>
-            <p class="fontPlayer year YearInfo descYear">2010</p>
-          </div>
-          <div class="InfoContainer">
-
-            <h3 class="marginReset blackInfo">Rating</h3>
-            <div class="marginFix ratingContainer">
-              <div class="ratingItem ratingInfo"></div>
-              <div class="ratingItem ratingInfo"></div>
-              <div class="ratingItem ratingInfo"></div>
-              <div class="ratingItem ratingInfo"></div>
-              <div class="ratingItem ratingInfo"></div>
+        <h1 class="descTitle hia">Select your movie</h1>
+        <div class="yaw">
+          <div class="playerInfo">
+            <div class="InfoContainer">
+              <h3 class="marginReset blackInfo">Created by</h3>
+              <a class="fontPlayer author authorInfo descAuth"></a>
             </div>
+            <div class="InfoContainer">
 
+              <h3 class="marginReset blackInfo">Year</h3>
+              <p class="fontPlayer year YearInfo descYear"></p>
+            </div>
+            <div class="InfoContainer">
+
+              <h3 class="marginReset blackInfo">Rating</h3>
+              <div class="marginFix ratingContainer">
+                <div class="ratingItem ratingInfo"></div>
+                <div class="ratingItem ratingInfo"></div>
+                <div class="ratingItem ratingInfo"></div>
+                <div class="ratingItem ratingInfo"></div>
+                <div class="ratingItem ratingInfo"></div>
+              </div>
+
+            </div>
           </div>
+          <div class="playerInfo1">
+
+            <div class="InfoContainer">
+
+              <h3 class="marginReset blackInfo ">Genre</h3>
+              <p class="fontPlayer genre genreInfo descCat"></p>
+            </div>
+            <div class="InfoContainer">
+
+              <h3 class="marginReset blackInfo durationFix">Duration</h3>
+              <p class="fontPlayer duration durationInfo descDur"></p>
+            </div>
+          </div>
+
+          <p class="description descriptionInfo descDesc"></p>
         </div>
-        <div class="playerInfo1">
-
-          <div class="InfoContainer">
-
-            <h3 class="marginReset blackInfo ">Genre</h3>
-            <p class="fontPlayer genre genreInfo descCat">Animation</p>
-          </div>
-          <div class="InfoContainer">
-
-            <h3 class="marginReset blackInfo durationFix">Duration</h3>
-            <p class="fontPlayer duration durationInfo descDur">4:45</p>
-          </div>
-        </div>
-
-        <p class="description descriptionInfo descDesc">As part of the on-going Star Wars-inspired action comedy video series between YouTubers Corey Vidal (ApprenticeA) and Craig Benzine (Wheezy Waiter), the guys take the battle to the Cantina with a new lightsaber fight.</p>
       </div>
     </div>
     <script type="text/javascript" src="js/data.js"></script>

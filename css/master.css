@@ -75,6 +75,7 @@ p {
   width: 17%;
   background: #1A1D24;
   /*overflow: scroll;*/
+  height: auto;
 }
 
 .filterMargin {
@@ -90,6 +91,11 @@ p {
   margin-top: 24px;
 }
 
+.searchbar:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #FEDE10;
+}
+
 .searchbar::placeholder {
   text-align: center;
   font-family: 'nunito';
@@ -98,7 +104,7 @@ p {
 }
 
 .filterItems {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .filterItems:hover {
@@ -134,6 +140,23 @@ p {
 
 /*FILM PART*/
 
+.filmTitle {
+  font-size: 10px;
+  position: absolute;
+  top: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: 50%;
+  text-align: center;
+  display: none;
+  width: 100%;
+}
+
+.filmItem:hover .filmTitle {
+  display: block;
+  text-align: center;
+}
+
 .filmContainer {
   -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.53);
@@ -158,13 +181,13 @@ p {
 }
 
 .filmItem {
+  position: relative;
   z-index: 0;
   cursor: pointer;
   width: 132px;
   height: 90px;
   border-radius: 10px;
   margin-bottom: 12px;
-  transition: 1s;
   overflow: hidden;
 }
 
@@ -174,9 +197,11 @@ p {
   object-fit: cover;
 }
 
-.filmItem:hover {
-  z-index: 0;
-  filter: blur(1px);
+.over {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: blur(1px) grayscale(70%);
 }
 
 .filmTxtOverlay {
@@ -187,16 +212,16 @@ p {
 /*PLAYER PART*/
 
 .playerContainer {
+  /*display: none;*/
   width: 61%;
   background: #1A1D24;
   /*overflow: scroll;*/
+  height: auto;
 }
 
 .playerBox {
   display: block;
-  margin: 20px auto;
-  /*text-content: center;*/
-  /*margin-left: 150px;*/
+  margin-top: 20px;
   width: 850px;
   height: 362px;
   background: #000000;
@@ -288,8 +313,8 @@ p {
 
 .usernameContainer {
   cursor: pointer;
-  margin-top: 50px;
   display: inline-flex;
+  margin-top: 50%;
 }
 
 .userImage {
@@ -297,7 +322,7 @@ p {
   margin-left: 30px;
   height: 32px;
   width: 32px;
-  background: #FEDE24;
+  /*background: #FEDE24;*/
   border-radius: 100%;
 }
 
@@ -308,4 +333,153 @@ p {
 .usernameFont {
   font-family: 'nunitoxbold';
   font-size: 14px;
+}
+
+/*
+*****************
+PLAYER***********
+******************
+*/
+
+.Container {
+  width: 850px;
+  height: 362px;
+}
+
+/*.lecteur{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+}*/
+
+.play_pause {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  background-color: #FEDE10;
+  background-image: url(../img/play_button.svg);
+  background-position: center;
+  background-size: 35px;
+  margin-right: 14px;
+}
+
+#stop {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  background-color: #FEDE10;
+  background-image: url(../img/stop_button.svg);
+  background-position: center;
+  background-size: 35px;
+}
+
+#fullscreenbtn {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../img/fullscreen_icon.svg);
+  background-position: center;
+  background-size: 37px;
+  margin-left: 15px;
+}
+
+#mutebtn {
+  width: 23px;
+  height: 19px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../img/volume_icon.svg);
+  background-size: 23px;
+  margin-left: 10px;
+}
+
+#volumeslider {
+  width: 80px;
+}
+
+.btnContainer {
+  margin-left: 15px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.VolumeAndFullScreenContainer {
+  width: 21%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 64px;
+}
+
+.controlButtonContainer {
+  position: absolute;
+  left: 62px;
+}
+
+.tempsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#progressBar {
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+.allButtoncontainer {
+  display: flex;
+  height: 60px;
+}
+
+.megaContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.test {
+  position: relative;
+}
+
+#tempsEnCours {
+  font-family: 'nunito';
+  font-size: 12px;
+  color: #fff;
+}
+
+#tempsTotal {
+  font-family: 'nunito';
+  font-size: 12px;
+  color: #fff;
+}
+
+.yaw {
+  display: none;
+}
+
+.hia {
+  font-family: 'nunitoblack';
+  font-size: 34px;
+  text-align: center;
+  color: #FEDE24;
+}
+
+.authorInfo {
+  color: #FEDE24;
+  text-decoration: none;
+  font-family: 'nunito';
+  font-size: 14px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
 }
